@@ -82,7 +82,7 @@ public class LandingActivity extends AppCompatActivity {
                         }
                     });
                 }
-                Intent i = new Intent(this, FacebookLoginActivity.class);
+                Intent i = new Intent(getApplicationContext(), FacebookLoginActivity.class);
                 startActivity(i);
             }
         }).start();
