@@ -1,17 +1,24 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#ff00ff"
-    tools:context="com.ver_techs.sth_android.LandingActivity">
+    android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="400dp"
-        android:src="@mipmap/ic_launcher"/>
+    <!-- Framelayout to display Fragments -->
+    <FrameLayout
+        android:id="@+id/frame_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-
-</RelativeLayout>
+    <!-- Listview to display slider menu -->
+    <ListView
+        android:id="@+id/list_slidermenu"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:choiceMode="singleChoice"
+        android:divider="@color/drawer_list_divider"
+        android:dividerHeight="1dp"
+        android:listSelector="@drawable/drawer_list_selector"
+        android:background="@color/drawer_list_background"/>
+</android.support.v4.widget.DrawerLayout>
